@@ -50,10 +50,12 @@ for mod_name, value in mod._modules.items():
 def named_params(modules):
     params = []
     
-    for mod_name, value in modules.keys():
-        param = ''
+    for mod_name, value in modules.items(): 
         for name, param in modules[mod_name]._parameters.items():
-            params.append((f'{mod_name}.{name}', value))
+            params.append((f'{mod_name}.{name}', param))
+
+    return params 
 
 
-    def recur_params():
+def recur_params(): 
+    pass
